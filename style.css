@@ -1,0 +1,377 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header{
+    width: 100%;
+    height: auto;
+    z-index: 5;
+}
+
+header .navbar{
+    background: transparent;
+    transition: all 1s ease-in;
+}
+
+.activeNav{
+    background-color: black !important;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.295);
+}
+
+header .navbar .navbar-brand {
+    margin-left: 100px;
+}
+
+header .navbar .navbar-brand img{
+    width: 50px;
+    height: auto;
+}
+
+header .navbar #navbarNav{
+    justify-content: right;
+    margin-right: 100px;
+}
+
+header nav #navbarNav ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+header #navbarNav ul li a:hover, header  #navbarNav ul li a.active{
+    background-color: white;
+    color: #2b1055;
+}
+
+#parallax{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(5deg, #071f21, #262a29);
+}
+
+#parallax::before{
+    content: '';
+    position: absolute;
+    bottom: -200px;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(to bottom, transparent, #7597de);
+    z-index: 10;
+} 
+ 
+#parallax img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+ 
+#parallax img#logo{
+    width: 100px;
+    height: auto;
+    margin: 40px calc(50% - 50px);
+    z-index: 2;
+    mix-blend-mode: screen;
+}
+ 
+ 
+#parallax img#room{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    z-index: 1;
+    filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.341));
+}
+
+#parallax #text{
+    position: absolute;
+    right: -300px;
+    z-index: 3;
+    white-space: nowrap;
+    font-size: 4vw;
+    color: white;
+}
+
+#parallax #btn{
+    position: absolute;
+    z-index: 3;
+    text-decoration: none;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background-color: white;
+    color: #2b1055;
+    font-size: 1.5em;
+    transform: translateY(100px);
+}
+ 
+ 
+#parallax img#front{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    z-index: 4;
+}
+
+
+/* main */
+
+main{
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 10;
+    padding-top: 50px;
+    /* background: linear-gradient(-45deg, rgb(48, 47, 47), black); */
+}
+
+
+ /* Produtora */
+main section{
+    width: 100% ;
+    min-height: 100vh;
+    padding: 100px 0px;
+}
+
+main section h2{
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+}
+
+
+main .servicos{
+    width: 100%;
+    background: linear-gradient(135deg, rgb(35, 34, 34), black);
+}
+
+main .servicos h2{
+    color: white;
+    font-weight: lighter;
+}
+
+main .servicos .card-content{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px 0px;
+    gap: 20px;
+}
+
+main .servicos .card-content .card{
+    width: auto;
+    border: none;
+}
+
+main .servicos .card-content img{
+    width: 100%;
+    height: auto;
+}
+
+main .servicos .card-content .card .card-body{
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 50px;
+    background: rgba(255, 255, 255, 0.341);
+    display: none;
+
+}
+
+main .servicos .card-content .card:hover > .card-body{
+    cursor: default;
+    display: block;
+}
+
+main .servicos .card-content .card:hover{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Portifolio */ 
+main .portifolio{
+    width: 100%;
+    background: linear-gradient(135deg, white, rgba(128, 128, 128, 0.282));
+}
+
+main .portifolio .portifolio-content{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    padding: 30px 0px;
+    gap: 20px;
+}
+
+main .portifolio .portifolio-content div{
+    display: inline-block;
+    width: 32%;
+}
+
+main .portifolio .portifolio-content div iframe{
+    width: 426px;
+    max-width: 100%;
+    height: 240px;
+    margin: auto;
+}
+
+main .portifolio .portifolio-content div iframe:hover{
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+    cursor: pointer;
+}
+
+/* Clientes */ 
+main .clientes{
+    width: 100%;
+    background: linear-gradient(135deg, rgb(35, 34, 34), black);
+
+}
+
+main .clientes h2{
+    color: white;
+    font-weight: lighter;
+}
+
+main .clientes .clientes-content{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px;
+    gap: 2%;
+}
+
+main .clientes .clientes-content img{
+    width: 15%;
+    filter: grayscale(1);
+    /* filter: invert(5); */
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+    transition: all 0.5s ease;
+}
+
+main .clientes .clientes-content img:hover{
+    filter: grayscale(0%);
+}
+
+
+/* Footer*/ 
+footer{
+    width: 100%;
+    background-color: white;
+}
+
+footer section{
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 20px;
+}
+
+footer section ul{
+    width: auto;
+    height: auto;
+    margin: 0px ;
+}
+
+footer section ul li{
+    list-style: none;
+    color: black;
+}
+
+footer section ul li span{
+    font-size: 1.2em;
+}
+
+footer section ul li span:hover{
+    font-weight: bold;
+}
+
+footer section ul li a{
+    color: rgba(52, 52, 52, 0.451);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+footer section ul li a:hover{
+    color: black;
+}
+
+footer .rodape{
+    background-color: white;
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+}
+
+footer .rodape p{
+    font-size: 0.8em;
+    line-height: auto;
+}
+
+footer .rodape ul{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.8em;
+}
+
+footer .rodape ul li{
+    margin: 0px 5px;
+}
+
+footer .rodape ul li img{
+    width: 40px;
+}
+
+footer .rodape ul li img:hover{
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+}
+
+/* Contato */ 
+#contato{
+    position: fixed;
+    right: 15px;
+    bottom: 40px;
+    z-index: 11;
+    background: none;
+    outline: none;
+    border: none;
+    opacity: 0.2;
+    transition: all 0.5 ease;
+}
+
+#contato:hover{
+    opacity: 0.8;
+}
+
+#contato img{
+    width: 50px;
+    height: auto;
+}
